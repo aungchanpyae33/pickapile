@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(179, 179, 179, 0.495);
+  background: url(../sparkler-1826607_1280.jpg);
+}
+.pile-container {
+  width: 300px;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.502);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ffff;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}

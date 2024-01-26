@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../sparkler-1826607_1280.jpg);
+}
+.container {
+  display: flex;
+  word-wrap: break-word;
+  flex-direction: column;
+  position: relative;
+
+  color: white;
+}
+.pile-container {
+  word-wrap: break-word;
+  padding: 2rem 0.3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+img {
+  width: 300px;
+  object-fit: cover;
+  height: 300px;
+  box-shadow: 0px 0px 4px rgba(218, 204, 204, 0.502);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+button {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  display: none;
+  color: #ffff;
+  margin: 0 0.5rem;
+}
+p {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1rem;
+}
+@media (max-width: 600px) {
+  button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+  }
+  #left {
+    left: 0;
+    top: 50%;
+  }
+  #right {
+    right: 0;
+  }
+  img {
+    display: none;
+  }
+  .show {
+    width: 80vw;
+    height: 350px;
+    display: inline;
+  }
+}

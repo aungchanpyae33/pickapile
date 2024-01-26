@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+
+  <script type="module">
+    import { processData, getIdFromClick } from "./js/fetch.js";
+
+    const container = document.querySelector(".container");
+    let isFlip = false;
+
+    processData().then((data) => {
+      const fetchData = data.Answers;
+      const d = fetchData
+        .filter((item) => item.AnswerId === getIdFromClick())
+        .map((item) => {
+          const imgElement = document.createElement("img");
+          imgElement.src = item.AnswerImageUrl;
+          const para = document.createElement("p");
+          para.textContent = item.AnswerDesp;
+          container.append(imgElement, para);
+        });
+      document.querySelector("img").addEventListener("click", () => {
+        if (!isFlip) {
+          container.classList.add("roate");
+          isFlip = true;
+        } else {
+          container.classList.remove("roate");
+          isFlip = false;
+        }
+      });
+    });
+  </script>
+</html>
